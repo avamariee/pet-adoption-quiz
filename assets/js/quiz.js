@@ -19,15 +19,27 @@ function theQuestions() {
     //current title 
     titleE1.textContent = current.title;
 
+    //loop
     current.choices.forEach(function(choice, i ) {
-        var choicePick = document.createElement("li");
+        //button for choices
+        var choicePick = document.createElement("button");
         choicePick.setAttribute("class", "choice");
         choicePick.setAttribute("value", choice);
 
         choicePick.textContent = i + 1 + ". " + choice;
 
+        choicePick.onclick = next;
+
+        //display
         choicesEl.appendChild(choicePick);
-    })
+    });
+
+}
+
+
+function next() {
+    currentQuestionI++;
+    theQuestions();
 
 }
 
