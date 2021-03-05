@@ -19,6 +19,9 @@ function theQuestions() {
     //current title 
     titleE1.textContent = current.title;
 
+    //clear choices
+    choicesEl.innerHTML = "";
+
     //loop
     current.choices.forEach(function(choice, i ) {
         //button for choices
@@ -30,9 +33,6 @@ function theQuestions() {
 
         //click event listener for choices
         choicePick.onclick = next;
-
-        //clear choices
-        choicesEl.innerHTML = "";
 
         //display
         choicesEl.appendChild(choicePick);
