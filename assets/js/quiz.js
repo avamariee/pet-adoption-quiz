@@ -8,12 +8,7 @@ var currentQuestionI = 0
 
 function start() {
     //hide start quiz btn
-    startbtn.addEventListener("click", hideshow, false);
-    function hideshow() {
-        document.getElementById('start').style.display = 'block'; 
-        this.style.display = 'none'
-    }
-
+    document.getElementById("start").style.display = "none";
     //get questions
     theQuestions(); 
 }
