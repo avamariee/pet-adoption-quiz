@@ -3,6 +3,7 @@ var qEl = document.getElementById("questions");
 var choicesEl = document.getElementById("choices");
 var titleE1 = document.getElementById("question-title");
 var startbtn = document.getElementById("start")
+var allDoneEl = document.getElementById("all-done");
 var currentQuestionI = 0
 
 
@@ -44,8 +45,19 @@ function theQuestions() {
 
 
 function next() {
+    
     currentQuestionI++;
+  
     theQuestions();
+}
+
+
+function final() {
+    // show result screen
+    allDoneE1.removeAttribute("class");
+
+    //hide questions
+    qE1.setAttribute("class", "hide");
 }
 
 //start quiz
