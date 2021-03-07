@@ -1,17 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <!-- Add more stylesheets here if preferred -->
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Cats vs Dogs Quiz</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <!-- Add more stylesheets here if preferred -->
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Cats vs Dogs Quiz</title>
 </head>
+
 <body>
-    
-    <script src="./assets/js/quiz.js"></script>
+  <!-- Title Nav Bar-->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <img class="hero-image" src="./assets/images/paw.svg" alt="cute paw print inside a heart" width="112"
+            height="28">
+          <h1>Dogs vs Cats Quiz!</h1>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Title/Nav Bar -->
+
+
+  <div class="columns is-mobile is-centered">
+    <div class="column is-half">
+      <p class="bd-notification is-primary">
+        <button class="button quiz-button" id="begin-btn">Click Here to Begin!</button>
+      </p>
+    </div>
+  </div>
+
+  <!-- Initial Modal pop-up for user location information -->
+  <div class="modal" id="user-location">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Welcome!</p>
+        <button class="delete" id="delete-modal" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Please enter your state or zip code!</p>
+        <input class="input is-info is-hovered" type="text" id="user-info" placeholder="State or Zip Code">
+        <p>This information will be used at the end of the quiz.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="modal-save">Save changes</button>
+        <button class="button" id="modal-cancel">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-content">
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="./assets/js/quiz.js"></script>
+  <script src="assets/js/question.js"></script>
 </body>
+
 </html>
