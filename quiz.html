@@ -11,7 +11,43 @@
     <title>Cats vs Dogs Quiz</title>
 </head>
 <body>
+<!-- Title Nav Bar-->
+<header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <div class="navbar-item">
+                <img class="hero-image" src="./assets/images/paw.svg" alt="cute paw print inside a heart"
+                    width="112" height="28">
+                <h1>Dogs vs Cats Quiz!</h1>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- End Title/Nav Bar -->
+
+<button class="button" id="begin-btn">Click Here to Begin!</button>
+
+<!-- Initial Modal pop-up for user location information -->
+<div class="modal" id="user-location">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Modal title</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Please enter your state or zip code!</p>
+        <input class="input is-info is-hovered" type="text" placeholder="State or Zip Code">
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" id="modal-save">Save changes</button>
+        <button class="button" id="modal-cancel">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
     
     <script src="./assets/js/quiz.js"></script>
+    <script src='./assets/js/script.js'></script>
 </body>
 </html>
