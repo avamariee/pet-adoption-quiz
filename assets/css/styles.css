@@ -17,6 +17,8 @@ body{
   text-align: center;
 }
 
+
+
 .button {
   background-color: #5680e9;
   border-color: #5ab9ea;
@@ -36,11 +38,9 @@ body{
   color: #5680e9;
   background-color: yellow;
 }
-
 .subtitle {
   text-decoration: none;
 }
-
 .one,.two, .three, .four, .five {
 background-color: #c1c8e4;
 }
@@ -58,3 +58,15 @@ background-color: #c1c8e4;
   }
 }
 
+@media screen and (min-width: 1088px) {
+  .container {
+    max-width: 960px;
+    width: 960px;
+  }
+  .container.is-fluid {
+    margin-left: 64px;
+    margin-right: 64px;
+    max-width: none;
+    width: auto;
+  }
+}
