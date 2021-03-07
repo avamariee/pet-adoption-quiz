@@ -1,8 +1,9 @@
 
 let modalSave = document.querySelector('#modal-save')
+
 let modalCancel = document.querySelector('#modal-cancel')
 let beginBtn = document.getElementById("begin-btn")
-
+let deleteModal = document.getElementById("delete-modal")
 let modalContainer = document.getElementById("user-location")
 
  function showModal () {
@@ -15,10 +16,28 @@ let modalContainer = document.getElementById("user-location")
 // code to save user's input for location
 
 let userLocation = function () {
-    localStorage.setItem("location", modalSave)
+    let modalInfo = document.querySelector("#user-info").value
+    localStorage.setItem("location", modalInfo)
+    modalContainer.classList.remove('is-active')
+    console.log("Hey there.")
+    
 }
 
-modalSave.addEventListener("submit", userLocation)
+modalSave.addEventListener("click", userLocation)
+
+// function for when the user clicks the 'x' button on the modal.
+
+function modalDelete () {
+
+    modalContainer.classList.remove('is-active')
+
+}
+
+deleteModal.addEventListener("click", modalDelete)
+
+// button listerner for when the user clicks the 'cancel' button on the modal.
+
+modalCancel.addEventListener("click", modalDelete)
 
 
 // fetch request code for the API's

@@ -45,6 +45,9 @@ body{
 background-color: #c1c8e4;
 }
 
+.quiz-button {
+  align-items: center;
+}
 /* media queries */
 
 @media screen and (min-width: 1088px) {
