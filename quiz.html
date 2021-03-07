@@ -31,7 +31,7 @@
   <div class="columns is-mobile is-centered">
     <div class="column is-half">
       <p class="bd-notification is-primary">
-        <button class="button quiz-button" id="begin-btn">Click Here to Begin!</button>
+        <button class="button is-large is-fullwidth quiz-button" id="begin-btn">Click Here to Begin!</button>
       </p>
     </div>
   </div>
@@ -40,17 +40,17 @@
   <div class="modal" id="user-location">
     <div class="modal-background"></div>
     <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Welcome!</p>
+      <header class="modal-card-head meow-card">
+        <p class="modal-card-title meow"><img src="./assets/images/paw.svg"></img>Meow!  </p>
         <button class="delete" id="delete-modal" aria-label="close"></button>
       </header>
-      <section class="modal-card-body">
+      <section class="modal-card-body meow-body">
         <p>Please enter your state or zip code!</p>
-        <input class="input is-info is-hovered" type="text" id="user-info" placeholder="State or Zip Code">
+        <input class="input is-info is-hovered is-medium meow-input" type="text" id="user-info" placeholder="State or Zip Code">
         <p>This information will be used at the end of the quiz.</p>
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success" id="modal-save">Save changes</button>
+        <button class="button save-changes" id="modal-save">Save changes</button>
         <button class="button" id="modal-cancel">Cancel</button>
       </footer>
     </div>
