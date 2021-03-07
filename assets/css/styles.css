@@ -72,6 +72,10 @@ background-color: #c1c8e4;
 
 }
 
+.hide {
+  visibility: hidden;
+}
+
 /* ava's CSS end */
 
 @media screen and (min-width: 1088px) {

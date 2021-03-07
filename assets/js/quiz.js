@@ -60,6 +60,8 @@ function final() {
     qE1.setAttribute("class", "hide");
 }
 
+/////////////////////////////////////////////////////////////////
+
 // ava's code starts here
 
 let modalSave = document.querySelector('#modal-save')
@@ -82,6 +84,7 @@ let userLocation = function () {
     localStorage.setItem("location", modalInfo)
     modalContainer.classList.remove('is-active')
     console.log("Hey there.")
+    beginBtn.classList.add('hide')
     
 }
 
