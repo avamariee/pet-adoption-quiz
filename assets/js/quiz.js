@@ -11,7 +11,7 @@ function start() {
     //hide start quiz btn
     document.getElementById("start").style.display = "none";
     //get questions
-    theQuestions(); 
+    theQuestions();
 }
 
 
@@ -26,7 +26,7 @@ function theQuestions() {
     choicesEl.innerHTML = "";
 
     //loop
-    current.choices.forEach(function(choice, i ) {
+    current.choices.forEach(function (choice, i) {
         //button for choices
         var choicePick = document.createElement("button");
         choicePick.setAttribute("class", "choice");
@@ -45,9 +45,9 @@ function theQuestions() {
 
 
 function next() {
-    
+
     currentQuestionI++;
-  
+
     theQuestions();
 }
 
@@ -70,7 +70,7 @@ let beginBtn = document.getElementById("begin-btn")
 let deleteModal = document.getElementById("delete-modal")
 let modalContainer = document.getElementById("user-location")
 
- function showModal () {
+function showModal() {
 
     modalContainer.classList.add('is-active')
     console.log("Hello.")
@@ -85,14 +85,14 @@ let userLocation = function () {
     modalContainer.classList.remove('is-active')
     console.log("Hey there.")
     beginBtn.classList.add('hide')
-    
+
 }
 
 modalSave.addEventListener("click", userLocation)
 
 // function for when the user clicks the 'x' button on the modal.
 
-function modalDelete () {
+function modalDelete() {
 
     modalContainer.classList.remove('is-active')
 
@@ -114,15 +114,29 @@ function kittyFetch() {
 
     fetch(
         // api
-        'https://api.unsplash.com/photos/?client_id='
+        'https://api.unsplash.com/photos/random?query=cats,kittens,cat&client_id='
         +
         kittykey
     )
         .then(function (response) {
             return response.json()
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function (response) {
+            console.log(response.data);
+
+            // select container to place kitty picture
+
+            let kittyContainer = document.querySelector("#kitty-container")
+            // empty the current html
+            kittyContainer.innerHTML = '';
+
+            // create image element to append to kittyContainer element
+
+            let kittyImg = document.createElement('img')
+            kittyImg.setAttribute('src', response.urls.small)
+
+            kittyContainer.appendChild(kittyImg);
+
 
         })
 
@@ -140,8 +154,20 @@ function dogFetch() {
         .then(function (response) {
             return response.json()
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function (response) {
+            console.log(response.data);
+
+            // select container to place dog picture
+
+            let doggyCotainer = document.querySelector("#doggy-container")
+            // empty the current html
+            doggyCotainer.innerHTML = '';
+            // create image elemenet to append to doggyContainer element
+
+            let doggyImg = document.createElement('img')
+            doggyImg.setAttribute('src', response.message)
+
+            doggyCotainer.appendChild(doggyImg)
         })
 }
 dogFetch();
