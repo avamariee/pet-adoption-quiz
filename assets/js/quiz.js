@@ -5,6 +5,7 @@ var titleE1 = document.getElementById("question-title");
 var startbtn = document.getElementById("modal-save")
 var allDoneEl = document.getElementById("all-done");
 var currentQuestionI = 0
+var score = 0 
 
 
 function start() {
@@ -46,7 +47,16 @@ function theQuestions() {
 }
 
 
-function next() {
+function next(event) {
+//console.log(event.target.textContent[0])
+    if (+event.target.textContent[0] === 1){
+        score-- 
+    }
+    else if (+event.target.textContent[0] === 2){
+        score++
+    };
+
+    console.log(score)
 
     currentQuestionI++;
 
