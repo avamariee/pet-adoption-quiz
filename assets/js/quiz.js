@@ -75,13 +75,17 @@ function next(event) {
 function final() {
     //show results
     finalEl.removeAttribute("class");
+    
+    // show final score
+    var solutionEl = document.getElementById("solution");
+    solutionEl.textContent = score;
 
 
     if (score < 0){
-        "Congrats! You are a cat person!"
+        "cat"
     }
     else if (score > 0) {
-        "Congrats! You are a dog person!"
+        "dog"
     };
 
     console.log(score)
