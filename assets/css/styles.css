@@ -91,15 +91,26 @@ body {
 }
 
 .animal-images {
-  height: 500px;
-  width: 500px;
+  height: 300px;
+  width: 300px;
 }
 
 .hide {
   visibility: hidden;
 }
-
 /* ava's CSS end */
+
+
+/* Luisianna added footer styling to fix footer issue  */
+
+.footer {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height:60px;
+  background-color: white;
+}
+
 
 @media screen and (min-width: 1088px) {
   .container {
@@ -109,7 +120,7 @@ body {
   .container.is-fluid {
     margin-left: 64px;
     margin-right: 64px;
-    max-width: none;
+    max-width: 100%;
     width: auto;
   }
   
