@@ -8,7 +8,7 @@ var questions = [
     },
     {
         title: "Which would you prefer to eat for dinner?",
-        choices: ["T-Bone Steak", "Sushi"]
+        choices: ["Sushi","T-Bone Steak"]
         // Dog , Cat
     },
     {
@@ -23,7 +23,7 @@ var questions = [
     },
     {
         title: "What is your honest opinion about vacuum cleaners?",
-        choices: ["Must destroy!!!", "They are terrifying, RUN AWAY!"]
+        choices: ["They are terrifying, RUN AWAY!", "Must destroy!!!"]
         // Dog , Cat
     }
 
