@@ -1,11 +1,12 @@
-body{
+body {
   color: #5680e9;
 }
 
 .navbar {
-  /* background-color:#84eecb; */ 
- background-color:#84ceeb;
+  /* background-color:#84eecb; */
+  background-color: #84ceeb;
 }
+
 .hero {
   margin: 0 auto;
   position: relative;
@@ -25,24 +26,33 @@ body{
   cursor: pointer;
   justify-content: center;
   padding-bottom: calc(0.375em - 1px);
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  padding-left: 5em;
+  padding-right: 5em;
   padding-top: calc(0.375em - 1px);
   text-align: center;
   white-space: nowrap;
+  border-radius: 100px;
+  transition: all .2s;
 }
 
 .button:hover {
-  color: #5680e9;
-  background-color: yellow;
+  color: #ffffff;
+  background-color: rgb(12, 46, 110);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.836);
+}
+
+.button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.89);
 }
 
 .subtitle {
   text-decoration: none;
 }
 
-.one,.two, .three, .four, .five {
-background-color: #c1c8e4;
+.one, .two, .three, .four, .five {
+  background-color: #c1c8e4;
 }
  /*tess start style for quiz*/
 
@@ -102,5 +112,5 @@ background-color: #c1c8e4;
     max-width: none;
     width: auto;
   }
+  
 }
-
