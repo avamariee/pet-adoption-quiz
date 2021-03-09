@@ -9,7 +9,7 @@ var questions = [
     {
         title: "Which would you prefer to eat for dinner?",
         choices: ["Sushi","T-Bone Steak"]
-        // Dog , Cat
+        // Cat , Dog
     },
     {
         title: "Would you consider yourself independent or dependent?",
@@ -24,7 +24,7 @@ var questions = [
     {
         title: "What is your honest opinion about vacuum cleaners?",
         choices: ["They are terrifying, RUN AWAY!", "Must destroy!!!"]
-        // Dog , Cat
+        // Cat , Dog
     }
 
 ];
