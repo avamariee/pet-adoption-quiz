@@ -2,14 +2,14 @@
 var qEl = document.getElementById("questions");
 var choicesEl = document.getElementById("choices");
 var titleE1 = document.getElementById("question-title");
-var startbtn = document.getElementById("start")
+var startbtn = document.getElementById("modal-save")
 var allDoneEl = document.getElementById("all-done");
 var currentQuestionI = 0
 
 
 function start() {
     //hide start quiz btn
-    document.getElementById("start").style.display = "none";
+    document.getElementById("modal-save").style.display = "none";
     //get questions
     theQuestions();
 }

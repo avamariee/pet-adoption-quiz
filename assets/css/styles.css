@@ -44,6 +44,14 @@ body{
 .one,.two, .three, .four, .five {
 background-color: #c1c8e4;
 }
+ /*tess start style for quiz*/
+
+ .choices button {
+  display: block;
+}
+
+ /*tess end style for quiz*/
+
 
 /* ava's CSS start */
 
