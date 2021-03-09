@@ -5,7 +5,7 @@ var qEl = document.getElementById("questions");
 var choicesEl = document.getElementById("choices");
 var titleE1 = document.getElementById("question-title");
 var startbtn = document.getElementById("modal-save")
-var finalEl = document.getElementById("petFinder");
+var finalEl = document.getElementById("final");
 var currentQuestionI = 0
 var score = 0 
 
@@ -58,13 +58,6 @@ function next(event) {
         score++
     };
 
-    if (score < 0){
-        
-    }
-    else if (score > 0) {
-        
-    };
-
     //console.log(score)
 
     currentQuestionI++;
@@ -80,8 +73,9 @@ function next(event) {
 
 
 function final() {
-    // show result screen
+    //show results
     finalEl.removeAttribute("class");
+
 
     if (score < 0){
         "Congrats! You are a cat person!"
@@ -89,6 +83,7 @@ function final() {
     else if (score > 0) {
         "Congrats! You are a dog person!"
     };
+
     console.log(score)
 
     //hide questions
