@@ -54,6 +54,52 @@ body {
 .one, .two, .three, .four, .five {
   background-color: #c1c8e4;
 }
+ /*tess start style for quiz*/
+
+ .choices button {
+  display: block;
+}
+
+ /*tess end style for quiz*/
+
+
+/* ava's CSS start */
+
+.quiz-button {
+  align-items: center;
+  margin-top: 75px;
+}
+
+.save-changes {
+  background-color: #5ab9ea;
+}
+
+.meow img {
+  width: 8%;
+}
+.meow-card {
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+.meow-body {
+  font-weight: bold;
+}
+.meow-input:focus {
+
+  background-color: rgba(129, 253, 243, 0.959);
+
+}
+
+.animal-images {
+  height: 500px;
+  width: 500px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/* ava's CSS end */
 
 @media screen and (min-width: 1088px) {
   .container {

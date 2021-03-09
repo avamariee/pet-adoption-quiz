@@ -31,7 +31,7 @@
   <div class="columns is-mobile is-centered">
     <div class="column is-half">
       <p class="bd-notification is-primary">
-        <button class="button quiz-button" id="begin-btn">Click Here to Begin!</button>
+        <button class="button is-large is-fullwidth quiz-button" id="begin-btn">Click Here to Begin!</button>
       </p>
     </div>
   </div>
@@ -40,30 +40,44 @@
   <div class="modal" id="user-location">
     <div class="modal-background"></div>
     <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Welcome!</p>
+      <header class="modal-card-head meow-card">
+        <p class="modal-card-title meow"><img src="./assets/images/paw.svg"></img>Meow!  </p>
         <button class="delete" id="delete-modal" aria-label="close"></button>
       </header>
-      <section class="modal-card-body">
+      <section class="modal-card-body meow-body">
         <p>Please enter your state or zip code!</p>
-        <input class="input is-info is-hovered" type="text" id="user-info" placeholder="State or Zip Code">
+        <input class="input is-info is-hovered is-medium meow-input" type="text" id="user-info" placeholder="State or Zip Code">
         <p>This information will be used at the end of the quiz.</p>
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success" id="modal-save">Save changes</button>
+        <button class="button save-changes" id="modal-save">Save changes</button>
         <button class="button" id="modal-cancel">Cancel</button>
       </footer>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-content">
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
+  <div class="level">
+    <!-- Card for Cat Pictures -->
+  
+    <div class="card level-item" >
+      <div class="card-image animal-image" id="kitty-container">
+          <img src="http://placekitten.com/500/500" alt="Placeholder image">
       </div>
     </div>
-  </div>
+    
+    <!-- Card for Quiz JS DOM Manipulation -->
+  
+    <div class="card level-item">
+      <div class="card-content">
+        <div id="questions" class="hide">
+          <h2 id="question-title">Question: This is the question.</h2>
+          <div id="choices" class="choices">
+            <button>Choice One</button>
+            <button>Choice Two</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
  <!-- Footer Begins-->
  <footer class="footer">
@@ -72,8 +86,27 @@
       <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
   </footer>
 <!-- Footer Ends-->
+<!-- Display petfinder link after quiz has ended so user just has to click a link to be directed to pet adoptions -->
 
+    <div class="card level-item">
+      <div class="card-content">
+        <div id="petFinder" class="hide">
+          <h2 id="petfinder-title">
+            <!-- petfinder website link here-->
+          </h2>
+      </div>
+    </div>
+  
+    <!-- Card for Dog Pictures -->
+  
+    <div class="card level-item">
+      <div class="card-image" id="doggy-container">
+          <img src="http://placekitten.com/200/300" alt="Placeholder image">
+      </div>
+    </div>
+  </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="./assets/js/quiz.js"></script>
   <script src="assets/js/question.js"></script>
 </body>

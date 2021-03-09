@@ -2,21 +2,23 @@
 var qEl = document.getElementById("questions");
 var choicesEl = document.getElementById("choices");
 var titleE1 = document.getElementById("question-title");
-var startbtn = document.getElementById("start")
+var startbtn = document.getElementById("modal-save")
 var allDoneEl = document.getElementById("all-done");
 var currentQuestionI = 0
 
 
 function start() {
     //hide start quiz btn
-    document.getElementById("start").style.display = "none";
+    document.getElementById("modal-save").style.display = "none";
     //get questions
-    theQuestions(); 
+    theQuestions();
 }
 
 
 function theQuestions() {
     //current object from question array
+    let questionsEl = document.getElementById("questions")
+    questionsEl.classList.remove('hide')
     var current = questions[currentQuestionI];
 
     //current title 
@@ -26,7 +28,7 @@ function theQuestions() {
     choicesEl.innerHTML = "";
 
     //loop
-    current.choices.forEach(function(choice, i ) {
+    current.choices.forEach(function (choice, i) {
         //button for choices
         var choicePick = document.createElement("button");
         choicePick.setAttribute("class", "choice");
@@ -45,20 +47,23 @@ function theQuestions() {
 
 
 function next() {
-    
+
     currentQuestionI++;
-  
+
     theQuestions();
 }
 
 
 function final() {
+
     // show result screen
     allDoneE1.removeAttribute("class");
 
     //hide questions
     qE1.setAttribute("class", "hide");
 }
+
+/////////////////////////////////////////////////////////////////
 
 // ava's code starts here
 
@@ -68,7 +73,7 @@ let beginBtn = document.getElementById("begin-btn")
 let deleteModal = document.getElementById("delete-modal")
 let modalContainer = document.getElementById("user-location")
 
- function showModal () {
+function showModal() {
 
     modalContainer.classList.add('is-active')
     console.log("Hello.")
@@ -82,14 +87,15 @@ let userLocation = function () {
     localStorage.setItem("location", modalInfo)
     modalContainer.classList.remove('is-active')
     console.log("Hey there.")
-    
+    beginBtn.classList.add('hide')
+
 }
 
 modalSave.addEventListener("click", userLocation)
 
 // function for when the user clicks the 'x' button on the modal.
 
-function modalDelete () {
+function modalDelete() {
 
     modalContainer.classList.remove('is-active')
 
@@ -111,15 +117,30 @@ function kittyFetch() {
 
     fetch(
         // api
-        'https://api.unsplash.com/photos/?client_id='
+        'https://api.unsplash.com/photos/random?query=cats,kittens,cat&client_id='
         +
         kittykey
     )
         .then(function (response) {
             return response.json()
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function (response) {
+            console.log(response.data);
+
+            // select container to place kitty picture
+
+            let kittyContainer = document.querySelector("#kitty-container")
+            // empty the current html
+            kittyContainer.innerHTML = '';
+
+            // create image element to append to kittyContainer element
+
+            let kittyImg = document.createElement('img')
+            kittyImg.setAttribute('src', response.urls.small)
+            kittyImg.classList.add('animal-images')
+
+            kittyContainer.appendChild(kittyImg);
+
 
         })
 
@@ -137,11 +158,60 @@ function dogFetch() {
         .then(function (response) {
             return response.json()
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function (response) {
+            console.log(response.data);
+
+            // select container to place dog picture
+
+            let doggyCotainer = document.querySelector("#doggy-container")
+            // empty the current html
+            doggyCotainer.innerHTML = '';
+            // create image elemenet to append to doggyContainer element
+
+            let doggyImg = document.createElement('img')
+            doggyImg.setAttribute('src', response.message)
+            doggyImg.classList.add('animal-images')
+
+            doggyCotainer.appendChild(doggyImg)
         })
 }
 dogFetch();
+
+// let petFinder = "HwwW7HsxodZ98IyufO4qxjMN7Y5jliJEfxInvT5wwpqImlzJCP"
+
+// function petfinderFetch() {
+//     fetch(
+//         'http://api.petfinder.com/my.method? ' + 'key=' + petFinder + '&arg1=foo' 
+        
+//     )
+//     .then(function(response){
+//         return response.json()
+//     })
+//     .then(function(response){
+//         console.log(response.data)
+
+//     })
+// }
+// petfinderFetch()
+
+// alternative to petfinder API? does not work with CORS, unable to make requests.
+
+function adoptionDisplay(){
+    // code to display adoption information after quiz has ended
+    // https://www.petfinder.com/search/dogs-for-adoption/us/utah/
+    // https://www.petfinder.com/search/cats-for-adoption/us/utah/
+
+    if ('user is cat person') {
+        document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'>Click Here for Pet Adoptions in your Area!</a>"
+    }
+    else if ('user is dog person'){
+        document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'>Click Here for Pet Adoptions in your Area!</a>"
+    }
+
+}
+
+// call adoptionDisplay after quiz has ended
+
 
 beginBtn.addEventListener("click", showModal)
 
