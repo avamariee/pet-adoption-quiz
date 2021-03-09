@@ -1,9 +1,11 @@
+// Tess's code starts here
+
 //variables
 var qEl = document.getElementById("questions");
 var choicesEl = document.getElementById("choices");
 var titleE1 = document.getElementById("question-title");
 var startbtn = document.getElementById("modal-save")
-var allDoneEl = document.getElementById("all-done");
+var finalEl = document.getElementById("petFinder");
 var currentQuestionI = 0
 var score = 0 
 
@@ -60,18 +62,27 @@ function next(event) {
 
     currentQuestionI++;
 
-    theQuestions();
+    // check for more questions
+    if (currentQuestionI === questions.length) {
+        final();
+    } else {
+        theQuestions();
+    }
+
 }
 
 
 function final() {
 
     // show result screen
-    allDoneE1.removeAttribute("class");
+    finalEl.removeAttribute("class");
+   
 
     //hide questions
-    qE1.setAttribute("class", "hide");
+    document.getElementById("questions").style.display = "none";
 }
+
+// Tess's code ends here
 
 /////////////////////////////////////////////////////////////////
 
