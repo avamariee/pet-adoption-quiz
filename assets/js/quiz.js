@@ -17,6 +17,8 @@ function start() {
 
 function theQuestions() {
     //current object from question array
+    let questionsEl = document.getElementById("questions")
+    questionsEl.classList.remove('hide')
     var current = questions[currentQuestionI];
 
     //current title 
@@ -53,6 +55,7 @@ function next() {
 
 
 function final() {
+
     // show result screen
     allDoneE1.removeAttribute("class");
 
@@ -134,6 +137,7 @@ function kittyFetch() {
 
             let kittyImg = document.createElement('img')
             kittyImg.setAttribute('src', response.urls.small)
+            kittyImg.classList.add('animal-images')
 
             kittyContainer.appendChild(kittyImg);
 
@@ -166,6 +170,7 @@ function dogFetch() {
 
             let doggyImg = document.createElement('img')
             doggyImg.setAttribute('src', response.message)
+            doggyImg.classList.add('animal-images')
 
             doggyCotainer.appendChild(doggyImg)
         })
