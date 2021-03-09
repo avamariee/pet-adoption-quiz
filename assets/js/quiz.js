@@ -58,7 +58,14 @@ function next(event) {
         score++
     };
 
-    console.log(score)
+    if (score < 0){
+        
+    }
+    else if (score > 0) {
+        
+    };
+
+    //console.log(score)
 
     currentQuestionI++;
 
@@ -67,16 +74,22 @@ function next(event) {
         final();
     } else {
         theQuestions();
-    }
+    };
 
 }
 
 
 function final() {
-
     // show result screen
     finalEl.removeAttribute("class");
-   
+
+    if (score < 0){
+        "Congrats! You are a cat person!"
+    }
+    else if (score > 0) {
+        "Congrats! You are a dog person!"
+    };
+    console.log(score)
 
     //hide questions
     document.getElementById("questions").style.display = "none";
