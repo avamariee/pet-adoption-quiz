@@ -37,6 +37,10 @@ function theQuestions() {
     //current object from question array
     let questionsEl = document.getElementById("questions")
     questionsEl.classList.remove('hide')
+    let dogContainer = document.getElementById("doggy-container")
+    dogContainer.classList.remove('hide')
+    let catContainer = document.getElementById("kitty-container")
+    catContainer.classList.remove('hide')
     var current = questions[currentQuestionI];
 
     //current title 
@@ -118,6 +122,27 @@ function final() {
 
     //hide questions
     document.getElementById("questions").style.display = "none";
+
+
+
+    function adoptionDisplay(){
+
+        // code to display adoption information after quiz has ended
+        // https://www.petfinder.com/search/dogs-for-adoption/us/
+        // https://www.petfinder.com/search/cats-for-adoption/us/
+    
+        if (personType = "cat") {
+            document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
+            document.getElementById("petFinder").classList.remove("hide")
+        }
+        else if (personType = "dog"){
+            document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
+            document.getElementById("petFinder").classList.remove("hide")
+        }
+    
+    }
+
+    adoptionDisplay();
 }
 
 
