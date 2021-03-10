@@ -36,6 +36,8 @@
     </div>
   </div>
 
+  
+
   <!-- Initial Modal pop-up for user location information -->
   <div class="modal" id="user-location">
     <div class="modal-background"></div>
@@ -60,14 +62,16 @@
     <!-- Card for Cat Pictures -->
   
     <div class="card level-item" >
+
       <div class="card-image animal-image" id="kitty-container">
-          <img src="http://placekitten.com/500/500" alt="Placeholder image">
+          <img src="http://placekitten.com/200/200" alt="Placeholder image">
+      
       </div>
     </div>
     
     <!-- Card for Quiz JS DOM Manipulation -->
 
-    <div class="card level-item">
+    <div class="card level-item ">
 
       <div class="card-content">
         <div id="questions" class="hide">
@@ -77,31 +81,32 @@
         </div>
       </div>
 
-      <div id="final" class="hide">
+      <div id="final" class="is-hidden">
         <h2 class ="is-family-monospace has-text-weight-bold has-text-info has-text-centered is-size-5" >
           CONGRATULATIONS!
         </h2>
         <p class ="is-family-monospace has-text-weight-bold has-text-info has-text-centered is-size-5">
           You are a <span id="solution"></span> person!
         </p>
+        <div class="card level-item">
+          <div class="card-content">
+            <div id="petFinder" class="hide">
+              <h2 id="petfinder-title">
+                <!-- petfinder website link here-->
+              </h2>
+          </div>
+        </div>
       </div>
     </div>
 
 <!-- Display petfinder link after quiz has ended so user just has to click a link to be directed to pet adoptions -->
 
-    <div class="card level-item">
-      <div class="card-content">
-        <div id="petFinder" class="hide">
-          <h2 id="petfinder-title">
-            <!-- petfinder website link here-->
-          </h2>
-      </div>
-    </div>
+    
   
     <!-- Card for Dog Pictures -->
   
     <div class="card level-item">
-      <div class="card-image" id="doggy-container">
+      <div class="card-image hide" id="doggy-container">
           <img src="http://placekitten.com/200/300" alt="Placeholder image">
       </div>
     </div>
@@ -119,6 +124,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="./assets/js/quiz.js"></script>
   <script src="assets/js/question.js"></script>
+  
 </body>
 
 </html>
