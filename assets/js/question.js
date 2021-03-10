@@ -3,7 +3,7 @@ var questions = [
 
     {
         title: "On a Friday night would you rather stay in or go to the club?",
-        choices: ["Defenitely stay in!", "Hello..? PARTY!"],
+        choices: ["Definitely stay in!", "Hello..? PARTY!"],
         // Cat , Dog
     },
     {
