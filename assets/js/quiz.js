@@ -131,11 +131,11 @@ function final() {
         // https://www.petfinder.com/search/dogs-for-adoption/us/
         // https://www.petfinder.com/search/cats-for-adoption/us/
     
-        if (personType = "cat") {
+        if (score < 0) {
             document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
             document.getElementById("petFinder").classList.remove("hide")
         }
-        else if (personType = "dog"){
+        else if (score > 0){
             document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
             document.getElementById("petFinder").classList.remove("hide")
         }
@@ -285,23 +285,6 @@ dogFetch();
 // petfinderFetch()
 
 // alternative to petfinder API? does not work with CORS, unable to make requests.
-
-function adoptionDisplay(){
-    // code to display adoption information after quiz has ended
-    // https://www.petfinder.com/search/dogs-for-adoption/us/utah/
-    // https://www.petfinder.com/search/cats-for-adoption/us/utah/
-
-    if ('user is cat person') {
-        document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'>Click Here for Pet Adoptions in your Area!</a>"
-    }
-    else if ('user is dog person'){
-        document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'>Click Here for Pet Adoptions in your Area!</a>"
-    }
-
-}
-
-// call adoptionDisplay after quiz has ended
-
 
 beginBtn.addEventListener("click", showModal)
 
