@@ -6,14 +6,17 @@ var choicesEl = document.getElementById("choices");
 var titleE1 = document.getElementById("question-title");
 var startbtn = document.getElementById("modal-save")
 var finalEl = document.getElementById("final");
-var currentQuestionI = 0
+var currentQuestionI = -1;
 var score = 0 
+
 
 
 function start() {
     //hide start quiz btn
     document.getElementById("modal-save").style.display = "none";
     //get questions
+
+    currentQuestionI = 0;
     theQuestions();
 }
 
@@ -50,43 +53,46 @@ function theQuestions() {
 
 
 function next(event) {
-//console.log(event.target.textContent[0])
-    if (+event.target.textContent[0] === 1){
-        score-- 
+
+        //console.log(event.target.textContent[0])
+        if (event.target.textContent[0] === "1"){
+            score-- 
+        }
+        else if (event.target.textContent[0] === "2"){
+            score++
+        }
+    }                
+
+    if (score !== oldScore) {
+        //console.log(score)
+
+        currentQuestionI++;
+
+        // check for more questions
+        if (currentQuestionI === questions.length) {
+            final();
+        } else {
+            theQuestions();
+        }
     }
-    else if (+event.target.textContent[0] === 2){
-        score++
-    };
-
-    //console.log(score)
-
-    currentQuestionI++;
-
-    // check for more questions
-    if (currentQuestionI === questions.length) {
-        final();
-    } else {
-        theQuestions();
-    };
-
 }
 
 
 function final() {
     //show results
-    finalEl.removeAttribute("class");
-    
-    // show final score
-    var solutionEl = document.getElementById("solution");
-    solutionEl.textContent = score;
-
+    var personType;
 
     if (score < 0){
-        "cat"
+        personType = "cat";
     }
-    else if (score > 0) {
-        "dog"
-    };
+    else  {
+        personType = "dog"
+    }
+
+    finalEl.removeAttribute("class");   
+    // show final score
+    var solutionEl = document.getElementById("solution");
+    solutionEl.textContent = personType;
 
     console.log(score)
 
