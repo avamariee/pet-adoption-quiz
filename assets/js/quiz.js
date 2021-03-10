@@ -9,7 +9,18 @@ var finalEl = document.getElementById("final");
 var currentQuestionI = -1;
 var score = 0 
 
+$(document).on("keypress", function (e) {
+    var passkeypresson = true;
 
+    if (currentQuestionI >= 0 && currentQuestionI < questions.length) {
+        if (e.key == "1" || e.key == "2") {
+            passkeypresson = false;
+            next(e);
+        }
+    }
+
+    return passkeypresson;    
+});
 
 function start() {
     //hide start quiz btn
@@ -53,7 +64,15 @@ function theQuestions() {
 
 
 function next(event) {
-
+    var oldScore = score;
+        if (event.type == "keypress") {
+            if (event.key === "1"){
+             score-- 
+            }
+            else if (event.key === "2"){
+                score++
+            }
+        } else {
         //console.log(event.target.textContent[0])
         if (event.target.textContent[0] === "1"){
             score-- 
