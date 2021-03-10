@@ -9,6 +9,7 @@ var finalEl = document.getElementById("final");
 var currentQuestionI = -1;
 var score = 0 
 
+
 $(document).on("keypress", function (e) {
     var passkeypresson = true;
 
@@ -113,11 +114,13 @@ function final() {
     var solutionEl = document.getElementById("solution");
     solutionEl.textContent = personType;
 
-    console.log(score)
+    //console.log(score)
 
     //hide questions
     document.getElementById("questions").style.display = "none";
 }
+
+
 
 // Tess's code ends here
 
