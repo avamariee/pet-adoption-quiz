@@ -41,6 +41,7 @@ function theQuestions() {
     dogContainer.classList.remove('hide')
     let catContainer = document.getElementById("kitty-container")
     catContainer.classList.remove('hide')
+
     var current = questions[currentQuestionI];
 
     //current title 
