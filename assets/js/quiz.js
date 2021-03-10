@@ -145,7 +145,11 @@ function final() {
     adoptionDisplay();
 }
 
-
+$("#user-info").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#modal-save").click();
+    }
+});
 
 // Tess's code ends here
 
