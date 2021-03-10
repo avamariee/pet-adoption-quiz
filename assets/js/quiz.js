@@ -9,7 +9,7 @@ var finalEl = document.getElementById("final");
 var currentQuestionI = -1;
 var score = 0 
 
-
+//allows you to press 1 or 2 on keyboard for option 1 or 2 
 $(document).on("keypress", function (e) {
     var passkeypresson = true;
 
@@ -69,6 +69,7 @@ function theQuestions() {
 
 
 function next(event) {
+    //key press instead of mouse click 
     var oldScore = score;
         if (event.type == "keypress") {
             if (event.key === "1"){
