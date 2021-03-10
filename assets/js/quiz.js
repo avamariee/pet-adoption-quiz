@@ -37,6 +37,10 @@ function theQuestions() {
     //current object from question array
     let questionsEl = document.getElementById("questions")
     questionsEl.classList.remove('hide')
+    let dogContainer = document.getElementById("doggy-container")
+    dogContainer.classList.remove('hide')
+    let catContainer = document.getElementById("kitty-container")
+    catContainer.classList.remove('hide')
     var current = questions[currentQuestionI];
 
     //current title 
@@ -118,9 +122,34 @@ function final() {
 
     //hide questions
     document.getElementById("questions").style.display = "none";
+
+
+
+    function adoptionDisplay(){
+
+        // code to display adoption information after quiz has ended
+        // https://www.petfinder.com/search/dogs-for-adoption/us/
+        // https://www.petfinder.com/search/cats-for-adoption/us/
+    
+        if (score < 0) {
+            document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
+            document.getElementById("petFinder").classList.remove("hide")
+        }
+        else if (score > 0){
+            document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
+            document.getElementById("petFinder").classList.remove("hide")
+        }
+    
+    }
+
+    adoptionDisplay();
 }
 
-
+$("#user-info").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#modal-save").click();
+    }
+});
 
 // Tess's code ends here
 
@@ -256,23 +285,6 @@ dogFetch();
 // petfinderFetch()
 
 // alternative to petfinder API? does not work with CORS, unable to make requests.
-
-function adoptionDisplay(){
-    // code to display adoption information after quiz has ended
-    // https://www.petfinder.com/search/dogs-for-adoption/us/utah/
-    // https://www.petfinder.com/search/cats-for-adoption/us/utah/
-
-    if ('user is cat person') {
-        document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'>Click Here for Pet Adoptions in your Area!</a>"
-    }
-    else if ('user is dog person'){
-        document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'>Click Here for Pet Adoptions in your Area!</a>"
-    }
-
-}
-
-// call adoptionDisplay after quiz has ended
-
 
 beginBtn.addEventListener("click", showModal)
 
