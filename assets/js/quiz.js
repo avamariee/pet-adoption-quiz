@@ -7,7 +7,7 @@ var titleE1 = document.getElementById("question-title");
 var startbtn = document.getElementById("modal-save")
 var finalEl = document.getElementById("final");
 var currentQuestionI = -1;
-var score = 0 
+var score = 0
 
 //allows you to press 1 or 2 on keyboard for option 1 or 2 
 $(document).on("keypress", function (e) {
@@ -20,7 +20,7 @@ $(document).on("keypress", function (e) {
         }
     }
 
-    return passkeypresson;    
+    return passkeypresson;
 });
 
 function start() {
@@ -72,22 +72,22 @@ function theQuestions() {
 function next(event) {
     //key press instead of mouse click 
     var oldScore = score;
-        if (event.type == "keypress") {
-            if (event.key === "1"){
-             score-- 
-            }
-            else if (event.key === "2"){
-                score++
-            }
-        } else {
-        //console.log(event.target.textContent[0])
-        if (event.target.textContent[0] === "1"){
-            score-- 
+    if (event.type == "keypress") {
+        if (event.key === "1") {
+            score--
         }
-        else if (event.target.textContent[0] === "2"){
+        else if (event.key === "2") {
             score++
         }
-    }                
+    } else {
+        //console.log(event.target.textContent[0])
+        if (event.target.textContent[0] === "1") {
+            score--
+        }
+        else if (event.target.textContent[0] === "2") {
+            score++
+        }
+    }
 
     if (score !== oldScore) {
         //console.log(score)
@@ -108,14 +108,14 @@ function final() {
     //show results
     var personType;
 
-    if (score < 0){
+    if (score < 0) {
         personType = "cat";
     }
-    else  {
+    else {
         personType = "dog"
     }
 
-    finalEl.removeAttribute("class");   
+    finalEl.removeAttribute("class");
     // show final score
     var solutionEl = document.getElementById("solution");
     solutionEl.textContent = personType;
@@ -127,27 +127,27 @@ function final() {
 
 
 
-    function adoptionDisplay(){
+    function adoptionDisplay() {
 
         // code to display adoption information after quiz has ended
         // https://www.petfinder.com/search/dogs-for-adoption/us/
         // https://www.petfinder.com/search/cats-for-adoption/us/
-    
+
         if (score < 0) {
             document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/cats-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
             document.getElementById("petFinder").classList.remove("hide")
         }
-        else if (score > 0){
+        else if (score > 0) {
             document.getElementById("petfinder-title").innerHTML = "<a href='https://www.petfinder.com/search/dogs-for-adoption/us/" + localStorage.getItem("location") + "'target='_blank'>Click Here for Pet Adoptions in your Area!</a>"
             document.getElementById("petFinder").classList.remove("hide")
         }
-    
+
     }
 
     adoptionDisplay();
 }
 
-$("#user-info").keyup(function(event) {
+$("#user-info").keyup(function (event) {
     if (event.keyCode === 13) {
         $("#modal-save").click();
     }
@@ -168,7 +168,6 @@ let modalContainer = document.getElementById("user-location")
 function showModal() {
 
     modalContainer.classList.add('is-active')
-    console.log("Hello.")
 
 }
 
@@ -178,7 +177,6 @@ let userLocation = function () {
     let modalInfo = document.querySelector("#user-info").value
     localStorage.setItem("location", modalInfo)
     modalContainer.classList.remove('is-active')
-    console.log("Hey there.")
     beginBtn.classList.add('hide')
 
 }
@@ -274,7 +272,7 @@ dogFetch();
 // function petfinderFetch() {
 //     fetch(
 //         'http://api.petfinder.com/my.method? ' + 'key=' + petFinder + '&arg1=foo' 
-        
+
 //     )
 //     .then(function(response){
 //         return response.json()
