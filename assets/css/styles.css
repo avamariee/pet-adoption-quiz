@@ -60,13 +60,15 @@ body {
  
 
  .choices button {
-  background-color: rgb(144, 188, 255);
-  border-color: rgb(69, 117, 207);
-  color: rgb(245, 246, 248);
+  background-color: #5680e9;
+  border-color: #5ab9ea;
+  border-width: 1px;
+  color: white;
+  text-align: center;
   justify-content: center;
   border-radius: 70px;
-  font-family:fantasy;
-  font-size: 12pt;
+  font-family:monospace;
+  font-size: 18pt;
   
   
 }
@@ -103,13 +105,17 @@ body {
 }
 
 .animal-images {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
 }
 
 .hide {
   visibility: hidden;
 }
+
+
+  
+
 /* ava's CSS end */
 
 
