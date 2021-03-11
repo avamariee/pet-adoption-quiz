@@ -1,0 +1,145 @@
+body {
+  color: #5680e9;
+}
+
+.navbar {
+  /* background-color:#84eecb; */
+  background-color: #84ceeb;
+}
+
+.hero {
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  background-image: url("./assets/images/1034939470-huge.jpg");
+}
+
+.hero-head {
+  text-align: center;
+}
+
+.button {
+  background-color: #5680e9;
+  border-color: #5ab9ea;
+  border-width: 1px;
+  color: white;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.375em - 1px);
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: calc(0.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 100px;
+  transition: all .2s;
+}
+
+.button:hover {
+  color: #ffffff;
+  background-color: rgb(12, 46, 110);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.836);
+}
+
+.button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.89);
+}
+
+
+.subtitle {
+  text-decoration: none;
+}
+
+.one, .two, .three, .four, .five {
+  background-color: #c1c8e4;
+}
+ /*tess start style for quiz*/
+/*Luisianna added style to the buttons for the quiz questions*/
+ 
+
+ .choices button {
+  background-color: #5680e9;
+  border-color: #5ab9ea;
+  border-width: 1px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  border-radius: 70px;
+  font-family:monospace;
+  font-size: 18pt;
+  
+  
+}
+
+ /*tess end style for quiz*/
+
+ 
+
+/* ava's CSS start */
+
+.quiz-button {
+  align-items: center;
+  margin-top: 75px;
+}
+
+.save-changes {
+  background-color: #5ab9ea;
+}
+
+.meow img {
+  width: 8%;
+}
+.meow-card {
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+.meow-body {
+  font-weight: bold;
+}
+.meow-input:focus {
+
+  background-color: rgba(129, 253, 243, 0.959);
+
+}
+
+.animal-images {
+  height: 200px;
+  width: 200px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+
+  
+
+/* ava's CSS end */
+
+
+/* Luisianna added footer styling to fix footer issue  */
+
+.footer-quiz {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height:60px;
+  background-color: white;
+}
+
+
+@media screen and (min-width: 1088px) {
+  .container {
+    max-width: 960px;
+    width: 960px;
+  }
+  .container.is-fluid {
+    margin-left: 64px;
+    margin-right: 64px;
+    max-width: 100%;
+    width: auto;
+  }
+  
+}

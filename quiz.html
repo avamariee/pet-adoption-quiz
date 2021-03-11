@@ -1,17 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <!-- Add more stylesheets here if preferred -->
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Cats vs Dogs Quiz</title>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+  <!-- Add more stylesheets here if preferred -->
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Cats vs Dogs Quiz</title>
 </head>
+
 <body>
+  <!-- Title Nav Bar-->
+  <header>
+    <nav class="breadcrumb" aria-label="breadcrumbs">
+      <ul>
+        <img class="hero-image" src="./assets/images/paw.svg" alt="cute paw print inside a heart" width="112"
+        height="15">
+        <li><a href="./index.html">Home</a></li>
+        <li class="is-active"><a href="#" aria-current="page">Dogs vs Cats Quiz!</a></li>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- End Title/Nav Bar -->
+
+<section class="section-background">
+  <div class="columns is-mobile is-centered">
+    <div class="column is-half">
+      <p class="bd-notification is-primary">
+        <button class="button is-large is-fullwidth quiz-button" id="begin-btn">Click Here to Begin!</button>
+      </p>
+    </div>
+  </div>
+
+  
+
+  <!-- Initial Modal pop-up for user location information -->
+  <div class="modal" id="user-location">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head meow-card">
+        <p class="modal-card-title meow"><img src="./assets/images/paw.svg"></img>Meow!  </p>
+        <button class="delete" id="delete-modal" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body meow-body">
+        <p>Please enter your state!</p>
+        <input class="input is-info is-hovered is-medium meow-input" type="text" id="user-info" placeholder="State">
+        <p>This information will be used at the end of the quiz.</p>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button save-changes" id="modal-save">Save changes</button>
+        <button class="button" id="modal-cancel">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="level">
+    <!-- Card for Cat Pictures -->
+
+    <div class="card level-item" >
+
+      <div class="card-image hide" id="kitty-container">
+          <img src="http://placekitten.com/200/200" alt="Placeholder image">
+      
+      </div>
+    </div>
     
-    <script src="./assets/js/quiz.js"></script>
+    <!-- Card for Quiz JS DOM Manipulation -->
+
+      <div id="questions" class="hide">
+        <h2 class ="is-family-monospace has-text-weight-bold has-text-info has-text-centered is-size-5" id="question-title"></h2>
+        <div  id="choices" class="choices has-text-centered is-size-3"></div>
+      </div>
+
+      <div id="final" class="is-hidden">
+        <h2 class ="is-family-monospace has-text-weight-bold has-text-info has-text-centered is-size-5" >
+          CONGRATULATIONS!</h2>
+        <p class ="is-family-monospace has-text-weight-bold has-text-info has-text-centered is-size-5">
+          You are a <span id="solution"></span> person!</p>
+
+        <div class="card level-item">
+          <div class="card-content">
+            <div id="petFinder" class="hide">
+              <h2 id="petfinder-title">
+                <!-- petfinder website link here-->
+              </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Display petfinder link after quiz has ended so user just has to click a link to be directed to pet adoptions -->
+
+    
+  
+    <!-- Card for Dog Pictures -->
+  
+    <div class="card level-item">
+      <div class="card-image hide" id="doggy-container">
+          <img src="http://placekitten.com/200/300" alt="Placeholder image">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Begins-->
+  <footer class="footer">
+    <div class="content has-text-centered">
+        <strong>Made by Breakout Room 8 </strong>... with Love of Course ❤️
+      <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+  </footer>
+  <!-- Footer Ends-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="./assets/js/quiz.js"></script>
+  <script src="assets/js/question.js"></script>
+  
 </body>
+
 </html>
