@@ -1,5 +1,6 @@
 # pet-adoption-quiz
-This is a group project by Ava Bullock, Janell Myrick, Tess Austin and Luisianna Barrios. 
+> - This is a group project by Ava Bullock, Janell Myrick, Tess Austin and Luisianna Barrios. 
+> - There was a button styling contribution by user: rishabh341.
 
 ### **Problem**
 > Over-population of pets in animal shelters.
