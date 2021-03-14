@@ -2,7 +2,7 @@
 
 > - This is a group project by Ava Bullock, Janell Myrick, Tess Austin and Luisianna Barrios. 
 > - There was a button styling contribution by user: rishabh341.
-https://avamariee.github.io/pet-adoption-quiz/
+> - https://avamariee.github.io/pet-adoption-quiz/
 
 
 ### **Problem**
@@ -16,5 +16,5 @@ https://avamariee.github.io/pet-adoption-quiz/
 > - Each question will also display a random cat or dog image, powered by https://unsplash.com/ & https://dog.ceo/dog-api/.
 > - The user's results will also be saved into local storage,  which will be used at the end of the quiz. Upon completion  the user will be presented with their customized link to petfinder.com so they can see adoptions in their area. 
 > - The end goal will be to maker users more aware of how important it is to adopt animals from shelters.
-> - ![Screenshot of Pet-Adoption-Quiz](assets/images/dogs-vs-cats-screenshot.jpg)
+> - ![Screenshot of Pet-Adoption-Quiz](assets/images/dogs-vs-cats-screenshot.JPG)
 
