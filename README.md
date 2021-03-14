@@ -3,6 +3,7 @@
 > - This is a group project by Ava Bullock, Janell Myrick, Tess Austin and Luisianna Barrios. 
 > - There was a button styling contribution by user: rishabh341.
 > - https://avamariee.github.io/pet-adoption-quiz/
+> - This project uses HTML, CSS, Javascript, Jquery, Bulma, & FontAwesome.
 
 
 ### **Problem**
